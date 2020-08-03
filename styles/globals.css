@@ -1,16 +1,388 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+
+/* Import fonts */
+
+@font-face {
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/CircularStd-Book.ttf");
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/CircularStd-BookItalic.ttf");
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/CircularStd-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/CircularStd-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/CircularStd-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/CircularStd-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/CircularStd-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/CircularStd-BlackItalic.ttf");
+}
+
+/* Main Global CSS */
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Circular Std, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  @apply text-white bg-dark antialiased leading-normal;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Logo animation from https://developer.up.com.au */
+
+.fjoinp {
+  animation-duration: 900ms;
+  animation-iteration-count: infinite;
+  animation-name: jeTPCb;
+  animation-timing-function: steps(9);
+  background-size: 100%;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 675px;
+  will-change: transform;
+  background-image: url(/buzzing-sprite-yellow.png);
+  background-image: url(/buzzing-sprite-orange.png);
+  background-position: 0px 0%;
+  background-repeat: no-repeat;
 }
 
-* {
-  box-sizing: border-box;
+@-webkit-keyframes jeTPCb {
+  from {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+
+  to {
+    -webkit-transform: translateY(-675px);
+    -ms-transform: translateY(-675px);
+    transform: translateY(-675px);
+  }
 }
+
+/*!sc*/
+@keyframes jeTPCb {
+  from {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+
+  to {
+    -webkit-transform: translateY(-675px);
+    -ms-transform: translateY(-675px);
+    transform: translateY(-675px);
+  }
+}
+
+/* React CSS Transition Helpers (for page/screen transitions) */
+
+.alert-enter {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(100%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.alert-exit {
+  opacity: 1;
+}
+
+.alert-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 500ms, transform 500ms;
+}
+
+/* Slide Out Panel Styling */
+
+.sliding-panel-container {
+  z-index: 9999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sliding-panel-container.active {
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(2px);
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  will-change: transform;
+}
+
+.sliding-panel-container.active.click-through {
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.sliding-panel-container.click-through>div {
+  pointer-events: none;
+}
+
+.panel-content {
+  height: 100%;
+  width: 100%;
+  pointer-events: all;
+}
+
+.panel-container-left-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.panel-container-left-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 500ms, opacity 500ms;
+}
+
+.panel-container-left-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.panel-container-left-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 500ms, opacity 500ms;
+}
+
+/* Right panel animation  (change to be from bottom on small screens) */
+
+.panel-container-right-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.panel-container-right-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 500ms, opacity 500ms;
+}
+
+.panel-container-right-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.panel-container-right-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 500ms, opacity 5
+}
+
+@screen sm {
+  .panel-container-right-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  .panel-container-right-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 500ms, opacity 500ms;
+  }
+
+  .panel-container-right-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .panel-container-right-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 500ms, opacity 500ms;
+  }
+}
+
+/* END - Right panel animation */
+
+.panel-container-top-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.panel-container-top-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 500ms, opacity 500ms;
+}
+
+.panel-container-top-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.panel-container-top-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 500ms, opacity 500ms;
+}
+
+.panel-container-bottom-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.panel-container-bottom-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 500ms, opacity 500ms;
+}
+
+.panel-container-bottom-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.panel-container-bottom-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 500ms, opacity 5
+}
+
+.panel {
+  @apply w-full !important;
+}
+
+.glass {
+  @apply w-0 !important;
+}
+
+@screen sm {
+  .glass {
+    @apply w-full !important;
+  }
+
+  .panel {
+    @apply max-w-sm w-full !important;
+  }
+}
+
+/* Bounce Animation for Notification */
+
+.animate-bounce {
+  -webkit-animation: bounce 1s infinite;
+  animation: bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(-35%);
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: translateY(0);
+    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(-35%);
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: translateY(0);
+    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* Extra CSS below */

@@ -1,5 +1,5 @@
 {
-  "name": "up-web-api",
+  "name": "up-banking-web-unofficial",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "autoprefixer": "^9.8.5",
+    "moment": "^2.27.0",
     "next": "9.5.1",
+    "next-pwa": "^3.1.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-infinite-scroll-component": "^5.0.5",
+    "react-text-transition": "^1.1.1",
+    "react-transition-group": "^4.4.1",
+    "swr": "^0.3.0",
+    "tailwindcss": "^1.6.0"
   }
 }

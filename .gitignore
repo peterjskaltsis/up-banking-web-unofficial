@@ -32,3 +32,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# misc
+.dist
+.vscode
+public/sw.*
+public/workbox-*

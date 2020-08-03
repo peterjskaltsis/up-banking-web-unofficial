@@ -1,0 +1,14 @@
+{
+  "name": "Unofficial Up Banking Web",
+  "short_name": "Unofficial Up Web",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ff7a64",
+  "background_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "icon-lg.png",
+      "sizes": "192x192"
+    }
+  ]
+}
