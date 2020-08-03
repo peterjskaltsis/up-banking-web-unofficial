@@ -1,5 +1,8 @@
 module.exports = {
-  purge: [],
+  purge: [
+    "./pages/**/*.jsx",
+    "./components/**/*.jsx",
+  ],
   theme: {
     container: {
       padding: {
