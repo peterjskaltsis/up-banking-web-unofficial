@@ -87,7 +87,7 @@ export default function Index() {
         <div className="grid gap-4 md:grid-flow-col">
           <div>
             <p className="text-sm text-primary"><a href="https://api.up.com.au/getting_started/" title="Get your Personal Access Token to play with!" target="_blank" rel="noreferrer">Don't have your personal token?</a></p>
-            <p className="mt-4 text-gray-600 text-sm max--xs">We <b>do not</b> store this token in any way. Everything is kept in React state and no network requests are made, other than those to the Up API.</p>
+            <p className="mt-4 text-gray-600 text-sm max--xs">I <b>do not</b> store this token in any way. Everything is kept in React state and no network requests are made, other than those to the Up API.</p>
           </div>
           <div>
             <p className="text-sm text-gray-500">Agreement</p>

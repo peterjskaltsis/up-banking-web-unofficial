@@ -27,7 +27,7 @@ export default function SaverBlock({ attributes, hasGoal }) {
               </svg>
             }
           </p>
-          <div className="ml-auto">
+          <div className="ml-auto text-right">
             <p className="text- font-">${attributes.balance.value}</p>
             {hasGoal && <p className="text-xs font-normal text-gray-600"> of $100</p>}
           </div>
