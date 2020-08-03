@@ -16,7 +16,7 @@ const getPanelStyle = (type, size) => {
   const horizontal = type === 'bottom' || type === 'top'
   return {
     width: horizontal ? '100vw' : `${size}vw`,
-    height: horizontal ? `${size}vh` : '100vh',
+    height: horizontal ? `${size}vh` : '100%',
     ...(type === 'right' && { right: 0 }),
     ...(type === 'bottom' && { bottom: 0 }),
     position: 'inherit',
@@ -56,7 +56,7 @@ const SlideOut = ({
         </style>
       }
       <div>
-        <div className={`sliding-panel-container ${isOpen ? 'active' : ''} ${noBackdrop ? 'click-through' : ''}`}>
+        <div className={`sliding-panel-container  ${isOpen ? 'active z-50 h-full' : ''} ${noBackdrop ? 'click-through' : ''}`}>
           <CSSTransition
             in={isOpen}
             timeout={500}
@@ -70,7 +70,7 @@ const SlideOut = ({
             onExited={(node) => onClosed(node)}
             style={{ display: horizontal ? 'block' : 'flex' }}
           >
-            <div>
+            <div className="h-full">
               {glassBefore && (
                 <div
                   className="glass"

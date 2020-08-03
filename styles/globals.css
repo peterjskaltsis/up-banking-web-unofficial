@@ -182,7 +182,9 @@ body {
 /* Slide Out Panel Styling */
 
 .sliding-panel-container {
-  z-index: 9999;
+  transform: translate3d(0, 0, 0);
+  z-index: -1;
+  height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
@@ -190,6 +192,10 @@ body {
 }
 
 .sliding-panel-container.active {
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(2px);
   position: fixed;

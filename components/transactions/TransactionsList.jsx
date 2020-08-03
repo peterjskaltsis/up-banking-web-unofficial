@@ -96,8 +96,9 @@ export default function TransactionsList({ account, token }) {
 
   return (
     <>
-      <div className="w-full">
+      <div className="w-full overflow-visible">
         <InfiniteScroll
+          style={{ overflow: 'visible' }}
           next={loadNext}
           hasMore={isLoadingMore}
           loader={<LoadingIcon />}

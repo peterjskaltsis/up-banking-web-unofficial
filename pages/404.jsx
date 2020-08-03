@@ -48,7 +48,7 @@ export default function Error() {
                 <nav className="ml-auto grid grid-flow-col gap-6 text-gray-600 items-center">
                     <a href="https://up.com.au/" title="Go to Up's website" className="hover:text-gray-700 duration-100" target="_blank" rel="noopener">Up</a>
 
-                    <a href="https://www.github.com/peterjskaltsis/unofficial-up-web" title="Check out the source" className="hover:text-gray-700 duration-100" target="_blank" rel="noopener">Github</a>
+                    <a href="https://www.github.com/peterjskaltsis/up-banking-web-unofficial" title="Check out the source" className="hover:text-gray-700 duration-100" target="_blank" rel="noopener">Github</a>
 
                 </nav>
             </header>

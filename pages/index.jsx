@@ -169,7 +169,7 @@ export default function Index() {
     setError(false)
     return (
       <>
-        <div className="grid md:grid-cols-2 gap-10 relative">
+        <div className="grid md:grid-cols-2 gap-10">
           <div className="text-center">
             <h1 className="text-4xl font-medium flex items-center text-primary justify-center">
               <TextTransition
