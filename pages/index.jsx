@@ -248,15 +248,15 @@ export default function Index() {
         <meta name="robots" content="index,follow" />
 
         <meta name="og:title" property="og:title" content="Unofficial Up Web — An open banking experiment" />
-        <meta name="og:description" property="og:description" content="An unofficial web app client for Up Banking, built with their new API." />
-        <meta property="og:image" content="https://up.com.au/static/23661700c1e0d585234ef23df5632f41/up_api_blog_header.gif" />
-        <meta property="og:image:secure_url" content="https://up.com.au/static/23661700c1e0d585234ef23df5632f41/up_api_blog_header.gif" />
+        <meta name="og:description" property="og:description" content="An UNOFFICIAL web app client for Up Banking, built with their new open banking API." />
+        <meta property="og:image" content="https://up-banking-web-unofficial.vercel.app/cover.png" />
+        <meta property="og:image:secure_url" content="https://up-banking-web-unofficial.vercel.app/cover.png" />
         <meta property="og:image:alt" content="Unofficial Up Web" />
         <meta property="og:url" content="https://up-banking-web-unofficial.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Unofficial Up Web — An open banking experiment" />
-        <meta name="twitter:description" content="An unofficial web app client for Up Banking, built with their new API." />
-        <meta name="twitter:image" content="https://up.com.au/static/23661700c1e0d585234ef23df5632f41/up_api_blog_header.gif" />
+        <meta name="twitter:description" content="An UNOFFICIAL web app client for Up Banking, built with their new open banking API." />
+        <meta name="twitter:image" content="https://up-banking-web-unofficial.vercel.app/cover.png" />
 
         <link rel="apple-touch-icon" href="/icon-lg.png"></link>
         <link rel="icon" href="/favicon.ico"></link>
