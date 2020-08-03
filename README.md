@@ -18,7 +18,13 @@ Built by [Peter Skaltsis](https://www.twitter.com/peterjskaltsis).
 
 ## Extensions
 
-- [ ] Add savers
+Some potential extensions:
+
+- [ ] Add a savers to show your transactions for each account.
+- [ ] Add a webhook manager (create, list, delete etc).
+- [ ] Add icons and more detail to transactions (once available in the API).
+- [ ] Build a payment process (once available in the API).
+- [ ] Show profile information (if available in the API).
 
 ## Getting Started
 
