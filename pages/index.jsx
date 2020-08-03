@@ -292,7 +292,7 @@ export default function Index() {
               <button onClick={() => router.reload()} className="border border-transparent text-gray-900 font-semibold duration-100 md:flex hidden px-4 py-2 bg-primary hover:bg-primary-light focus:outline-none focus:border-primary-dark focus:shadow-outline active:bg-primary-dark transition ease-in-out duration-150 rounded">Log out</button>
             </>
             :
-            <a href="https://www.github.com/peterjskaltsis/unofficial-up-web" title="Check out the source" className="hover:text-gray-700 duration-100" target="_blank" rel="noopener">Github</a>
+            <a href="https://www.github.com/peterjskaltsis/up-banking-web-unofficial" title="Check out the source" className="hover:text-gray-700 duration-100" target="_blank" rel="noopener">Github</a>
           }
         </nav>
       </header>
