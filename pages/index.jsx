@@ -187,7 +187,7 @@ export default function Index() {
           <div className="h-fit sm:block hidden">
             <h2 className="text-4xl text-primary font-medium text-center w-full flex items-center justify-center">
               <TextTransition
-                text={`$` + accountData.data.reduce((totalSaved, acc, index) => index === 0 ? totalSaved : totalSaved + parseFloat(acc.attributes.balance.value), 0)}
+                text={`$` + accountData.data.reduce((totalSaved, acc, index) => index === 0 ? totalSaved : totalSaved + parseFloat(acc.attributes.balance.value), 0).toFixed(2)}
                 springConfig={presets.stiff}
               />
             </h2>
