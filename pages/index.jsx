@@ -6,8 +6,9 @@ import { useRouter } from 'next/router'
 
 import useSWR from 'swr'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
-const TextTransition = dynamic(() => import('react-text-transition').then(mod => mod), { ssr: false })
-const presets = dynamic(() => import('react-text-transition').then(mod => mod.presets), { ssr: false })
+import TextTransition, { presets } from 'react-text-transition'
+//const TextTransition = dynamic(() => import('react-text-transition').then(mod => mod), { ssr: false })
+//const presets = dynamic(() => import('react-text-transition').then(mod => mod.presets), { ssr: false })
 
 import { apiUrl, queryWithToken } from 'lib/api'
 import Avatar from 'components/up/Avatar'
@@ -15,6 +16,7 @@ import ArrowIcon from 'components/icons/ArrowIcon'
 import LoadingIcon from 'components/icons/LoadingIcon'
 import SaverBlock from 'components/savers/SaverBlock'
 import TransactionsList from 'components/transactions/TransactionsList'
+import ExportBlock from 'components/export/exportBlock'
 
 export default function Index() {
   // Number of pages in the app.
@@ -102,7 +104,7 @@ export default function Index() {
    * different page states, so that we don't have to store Personal Access Tokens in browser memory.
    */
   function MainApp() {
-    const { data: accountData, error: accountError } = useSWR([apiUrl + '/accounts', token], queryWithToken, { refreshInterval: 10000 })
+    const { data: accountData, error: accountError } = useSWR([apiUrl + '/accounts', token], queryWithToken, { refreshInterval: 1000000 })
 
     // Error connecting to the API.
     if (accountError) {
@@ -175,7 +177,7 @@ export default function Index() {
               <TextTransition
                 text={`$` + accountData.data[0].attributes.balance.value}
                 springConfig={presets.stiff}
-              />
+              >{`$` + accountData.data[0].attributes.balance.value}</TextTransition>
             </h1>
             <div className="text-gray-100 text-sm text-center w-full">Available</div>
             <br />
@@ -189,7 +191,7 @@ export default function Index() {
               <TextTransition
                 text={`$` + accountData.data.reduce((totalSaved, acc, index) => index === 0 ? totalSaved : totalSaved + parseFloat(acc.attributes.balance.value), 0).toFixed(2)}
                 springConfig={presets.stiff}
-              />
+              >{`$` + accountData.data.reduce((totalSaved, acc, index) => index === 0 ? totalSaved : totalSaved + parseFloat(acc.attributes.balance.value), 0).toFixed(2)}</TextTransition>
             </h2>
             <div className="text-gray-100 text-sm text-center w-full">Total saved</div>
             <br />
@@ -201,6 +203,11 @@ export default function Index() {
                   <SaverBlock key={index} hasGoal={index != 1} {...account} />
                 ))
               }
+            </div>
+            <br />
+
+            <div>
+              <ExportBlock />
             </div>
             <br />
 

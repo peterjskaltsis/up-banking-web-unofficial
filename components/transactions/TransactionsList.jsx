@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 import moment from 'moment'
-import { useSWRInfinite } from 'swr'
+import useSWRInfinite from 'swr/infinite'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 import ArrowIcon from 'components/icons/ArrowIcon'
@@ -32,7 +32,7 @@ export function useTransactionPages({ accountId, token } = {}) {
     },
     queryWithToken,
     {
-      refreshInterval: 10000, // Refresh every 10 seconds.
+      refreshInterval: 1000000, // Refresh every 1000 seconds.
       revalidateAll: true,
       // onSuccess: (data, key) => console.log("ppp", data)
     }

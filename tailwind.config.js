@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [
+  content: [
     "./pages/**/*.jsx",
     "./components/**/*.jsx",
   ],
@@ -21,6 +21,8 @@ module.exports = {
         primary: '#ff7a64',
         'primary-dark': '#FF6B5C',
         'primary-light': '#FE8F7D',
+        'secondary': 'rgb(255, 239, 107)',
+        'secondary-dark': 'rgb(56, 84, 84)',
         dark: '#242430',
         altWhite: 'rgba(251, 251, 250, 0.05)'
       },
@@ -34,6 +36,9 @@ module.exports = {
         xxs: '16rem'
       },
     },
+    fontFamily: {
+      'up': ['Circular', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
+    }
   },
   variants: {
     scale: ['responsive', 'hover', 'focus', 'group-hover'],

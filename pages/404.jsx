@@ -17,11 +17,15 @@ export default function Error() {
             </Head>
 
             <header className={"items-center py-6 md:mb-6 md:flex hidden"}>
-                <Link href="/">
-                    <a title="Return home" className="AnimatedLogo__Root-sc-1is1pya-0 equnmi h-24 w-24 overflow-hidden relative" style={{ height: 75, width: 75 }}>
-                        <div version="orangeOnYellow" className="AnimatedLogo__Background-sc-1is1pya-1 fjoinp"></div>
-                        <svg version="orangeOnYellow" className="AnimatedLogo__Wordmark-sc-1is1pya-2 relative text-white" fill="currentColor" viewBox="0 0 900 900"><defs></defs><path d="M782.78 435.5a113.87 113.87 0 0 0-9.47-43.75C747 332.2 692.2 302.46 626.68 312.24a175.72 175.72 0 0 0-32.46 8.07c-3.67-4.73-8.88-6.74-16.81-6.76h-39.22a10.73 10.73 0 0 0-10 7.23c-5.6 15.42-55.3 151.91-71.26 194.3-2.79 7.43-14 31.37-41.05 26.74a21.73 21.73 0 0 1-14.62-10 20.15 20.15 0 0 1-2.58-16.26l.68-2.36c1.59-5.56 3.39-11.86 5.53-17.51l62.48-164.91a10.57 10.57 0 0 0-9.88-14.31c-19.89 0-40.54 0-46.21-.05-9.87-.38-17.34 5.1-20.66 14.52-9.39 26.71-18.92 52.83-28.32 77.64-5.21 13.75-10.11 28.23-14.44 41-5.69 16.86-11.59 34.3-18.33 50.92-4.34 10.72-10.16 22.82-20.4 31.36-13.59 11.31-30.35 15.34-51.22 12.38-8-1.13-14.77-5.7-19.73-13.19-5.06-7.65-7.17-16.85-6.47-28.11.86-13.36 5.25-26.29 10.06-39.45 10.71-29.41 32.5-87.76 49-130.77a10.56 10.56 0 0 0-9.85-14.35H238.44a24.18 24.18 0 0 0-14.11 4c-9.25 6.15-21.38 17.75-35.45 31.2C169.47 372 145.42 395 122 410.19a10.56 10.56 0 0 0-.29 17.55c2.6 1.81 5 1.77 9.31 1a6.62 6.62 0 0 0 1.08-.2c6.6-1.35 21.23-5.05 53.88-13.41-9.3 23.51-18.73 48.72-23.44 75.8-5.74 32.93 2.4 63.7 23.54 89 34 40.68 89.92 42.26 127.55 26.54 14.17-5.92 25.05-15.56 33.94-25.12 17.75 23.47 49.32 33.44 75.4 30.84l-7.06 19.07-2.77 7.48c-11.62 31.45-26.09 70.6-34 90.85-2.67 6.85-2 13.93 1.8 19.46s10.13 8.57 17.75 8.57l38.24-.29a10.47 10.47 0 0 0 10-7c6.21-17.31 15.44-42.92 24.74-68.75l9.3-25.79c10.11-28.08 19.1-53 22.88-63.63l9.15-25.6a118.05 118.05 0 0 0 13.18 13.1c31.85 26.84 68.92 37 110.18 30.15 35.24-5.84 65.5-20.38 89.94-43.24 38.86-36.33 57.87-80.43 56.48-131.07zm-78.54 13.34c-4.64 34.54-20.81 60.79-48.08 78-14.29 9-29.61 13.61-45.55 13.61h-.31c-25.16-.08-46.41-15.77-54.15-40a82 82 0 0 1-3-13.31c-.23-1.61-.32-3.25-.46-5.48l-.17-1.58a108.85 108.85 0 0 1 25.54-65.24c16.69-19.84 38.41-30.84 64.59-32.58 1.36-.09 2.72-.14 4.06-.14 22.12 0 40.69 12 50.94 33 5.78 11.79 8 23.14 6.59 33.72z"></path></svg>
-                    </a>
+                <Link
+                    href="/"
+                    title="Return home"
+                    className="AnimatedLogo__Root-sc-1is1pya-0 equnmi h-24 w-24 overflow-hidden relative"
+                    style={{ height: 75, width: 75 }}>
+
+                    <div version="orangeOnYellow" className="AnimatedLogo__Background-sc-1is1pya-1 fjoinp"></div>
+                    <svg version="orangeOnYellow" className="AnimatedLogo__Wordmark-sc-1is1pya-2 relative text-white" fill="currentColor" viewBox="0 0 900 900"><defs></defs><path d="M782.78 435.5a113.87 113.87 0 0 0-9.47-43.75C747 332.2 692.2 302.46 626.68 312.24a175.72 175.72 0 0 0-32.46 8.07c-3.67-4.73-8.88-6.74-16.81-6.76h-39.22a10.73 10.73 0 0 0-10 7.23c-5.6 15.42-55.3 151.91-71.26 194.3-2.79 7.43-14 31.37-41.05 26.74a21.73 21.73 0 0 1-14.62-10 20.15 20.15 0 0 1-2.58-16.26l.68-2.36c1.59-5.56 3.39-11.86 5.53-17.51l62.48-164.91a10.57 10.57 0 0 0-9.88-14.31c-19.89 0-40.54 0-46.21-.05-9.87-.38-17.34 5.1-20.66 14.52-9.39 26.71-18.92 52.83-28.32 77.64-5.21 13.75-10.11 28.23-14.44 41-5.69 16.86-11.59 34.3-18.33 50.92-4.34 10.72-10.16 22.82-20.4 31.36-13.59 11.31-30.35 15.34-51.22 12.38-8-1.13-14.77-5.7-19.73-13.19-5.06-7.65-7.17-16.85-6.47-28.11.86-13.36 5.25-26.29 10.06-39.45 10.71-29.41 32.5-87.76 49-130.77a10.56 10.56 0 0 0-9.85-14.35H238.44a24.18 24.18 0 0 0-14.11 4c-9.25 6.15-21.38 17.75-35.45 31.2C169.47 372 145.42 395 122 410.19a10.56 10.56 0 0 0-.29 17.55c2.6 1.81 5 1.77 9.31 1a6.62 6.62 0 0 0 1.08-.2c6.6-1.35 21.23-5.05 53.88-13.41-9.3 23.51-18.73 48.72-23.44 75.8-5.74 32.93 2.4 63.7 23.54 89 34 40.68 89.92 42.26 127.55 26.54 14.17-5.92 25.05-15.56 33.94-25.12 17.75 23.47 49.32 33.44 75.4 30.84l-7.06 19.07-2.77 7.48c-11.62 31.45-26.09 70.6-34 90.85-2.67 6.85-2 13.93 1.8 19.46s10.13 8.57 17.75 8.57l38.24-.29a10.47 10.47 0 0 0 10-7c6.21-17.31 15.44-42.92 24.74-68.75l9.3-25.79c10.11-28.08 19.1-53 22.88-63.63l9.15-25.6a118.05 118.05 0 0 0 13.18 13.1c31.85 26.84 68.92 37 110.18 30.15 35.24-5.84 65.5-20.38 89.94-43.24 38.86-36.33 57.87-80.43 56.48-131.07zm-78.54 13.34c-4.64 34.54-20.81 60.79-48.08 78-14.29 9-29.61 13.61-45.55 13.61h-.31c-25.16-.08-46.41-15.77-54.15-40a82 82 0 0 1-3-13.31c-.23-1.61-.32-3.25-.46-5.48l-.17-1.58a108.85 108.85 0 0 1 25.54-65.24c16.69-19.84 38.41-30.84 64.59-32.58 1.36-.09 2.72-.14 4.06-.14 22.12 0 40.69 12 50.94 33 5.78 11.79 8 23.14 6.59 33.72z"></path></svg>
+
                 </Link>
 
                 <div className="relative group flex-col z-40 sm:flex hidden">
@@ -55,10 +59,13 @@ export default function Error() {
                     <p className="text-gray-600  max-w-xs">Sorry, but the page you were trying to view does not exist.</p>
                     <br />
                     <br />
-                    <Link href="/">
-                        <a title="Go back to the home page" className="sm:max-w-xxs w-full border border-transparent inline-flex flex items-center justify-center px-10 py-2 rounded bg-primary hover:bg-primary-light focus:outline-none focus:border-primary-dark focus:shadow-outline active:bg-primary-dark transition ease-in-out duration-150">
-                            <div className="text-center text-gray-900">Go Home</div>
-                        </a>
+                    <Link
+                        href="/"
+                        title="Go back to the home page"
+                        className="sm:max-w-xxs w-full border border-transparent inline-flex flex items-center justify-center px-10 py-2 rounded bg-primary hover:bg-primary-light focus:outline-none focus:border-primary-dark focus:shadow-outline active:bg-primary-dark transition ease-in-out duration-150">
+
+                        <div className="text-center text-gray-900">Go Home</div>
+
                     </Link>
                 </div>
             </main>
@@ -69,5 +76,5 @@ export default function Error() {
                 <a href="https://peter-s.now.sh/" target="_blank" rel="noopener" className="md:ml-auto mr-6 md:mt-0 mt-3">Built by <span className="text-primary">Peter Skaltsis</span></a>
             </footer>
         </div >
-    )
+    );
 }

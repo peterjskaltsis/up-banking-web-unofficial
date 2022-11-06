@@ -79,7 +79,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
-  @apply text-white bg-dark antialiased leading-normal;
+  @apply bg-dark antialiased leading-normal;
 }
 
 /* Logo animation from https://developer.up.com.au */
