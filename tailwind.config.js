@@ -1,4 +1,7 @@
 module.exports = {
+  corePlugins: {
+    preflight: false,
+  },
   content: [
     "./pages/**/*.jsx",
     "./components/**/*.jsx",
