@@ -207,7 +207,7 @@ export default function Index() {
             <br />
 
             <div>
-              <ExportBlock />
+              <ExportBlock accountId={accountData.data[0].id} token={token} />
             </div>
             <br />
 
