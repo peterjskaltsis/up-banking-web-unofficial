@@ -1,5 +1,6 @@
 const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
+const withLess = require("next-with-less");
 
 module.exports = withPWA({
   pwa: {
@@ -7,4 +8,8 @@ module.exports = withPWA({
     dest: 'public',
     runtimeCaching,
   }
+})
+
+module.exports = withLess ({
+  lessLoaderOptions: {}
 })
