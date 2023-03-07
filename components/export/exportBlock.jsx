@@ -89,7 +89,7 @@ export default function ExportBlock({ accountId, token }) {
             if (fieldName === 'amount') {
               return JSON.stringify(row['attributes'][fieldName]['value'], replacer)
             }
-            if (fieldName === 'cashback' && row['attributes'][fieldName]) {
+            if ((fieldName === 'cashback' || fieldName === 'roundUp') && row['attributes'][fieldName]) {
               return JSON.stringify(row['attributes'][fieldName]['amount']['value'], replacer)
             }
             return JSON.stringify(row['attributes'][fieldName], replacer)
